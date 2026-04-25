@@ -1,0 +1,143 @@
+body { font-family: sans-serif; background: #f4f4f9; padding: 20px; }
+.container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+h1 { text-align: center; color: #333; }
+.form-group { display: flex; gap: 5px; margin-bottom: 20px; }
+input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; flex: 1; }
+button { padding: 10px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
+button:hover { background: #218838; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+
+/* Novos estilos */
+.btn-qtd { background: #6c757d; padding: 5px 10px; margin: 0 5px; }
+.btn-delete { background: #dc3545; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+.btn-edit { background: #ffc107; color: #000; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+
+/* Adicione isso ao seu arquivo CSS */
+.qtd-click {
+    cursor: pointer;
+    background: #e9ecef;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.qtd-click:hover {
+    background: #dee2e6;
+}
+
+/* Estilo Base (já existente, com um ajuste no container) */
+.container { 
+    max-width: 95%; /* Agora ocupa quase toda a tela em celulares */
+    margin: 10px auto; 
+    background: white; 
+    padding: 15px; 
+    border-radius: 8px; 
+}
+
+/* Container da tabela para permitir scroll horizontal */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Permite rolar para o lado se a tabela for grande */
+    margin-top: 10px;
+}
+
+/* Media Query: Ajustes para dispositivos móveis */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column; /* Empilha os inputs verticalmente */
+        gap: 10px;
+    }
+    
+    input {
+        width: 100%; /* Ocupa a largura toda */
+        box-sizing: border-box; /* Garante que o padding não quebre o tamanho */
+    }
+    
+    button {
+        width: 100%; /* Botão grande para facilitar o toque */
+        padding: 15px;
+    }
+
+    /* Aumenta um pouco o padding da tabela para facilitar a leitura */
+    th, td {
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+    
+    .btn-qtd {
+        padding: 8px 12px; /* Botões de +/- maiores para dedos */
+    }
+}
+/* Barra de Pesquisa */
+.search-group {
+    margin-bottom: 20px;
+}
+
+.search-group input {
+    width: 97%;
+    padding: 12px;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Estilo das Pastas/Álbuns */
+.folder-title {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 25px;
+    border-left: 6px solid #28a745;
+    display: flex;
+    align-items: center;
+}
+
+.categoria-section {
+    margin-bottom: 20px;
+}
+
+/* Mantendo a responsividade que você já tinha */
+@media (max-width: 600px) {
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* Esconde o conteúdo por padrão */
+.folder-content {
+    display: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Classe que mostra o conteúdo */
+.folder-content.show {
+    display: block;
+}
+
+/* Estilo do título clicável */
+.folder-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none; /* Impede selecionar texto ao clicar rápido */
+    transition: background 0.2s;
+}
+
+.folder-title:hover {
+    background: #dfe3e7;
+}
+
+/* Estilo da setinha */
+.seta {
+    font-style: normal;
+    font-size: 0.8rem;
+    transition: transform 0.2s;
+    margin-right: 10px;
+}
