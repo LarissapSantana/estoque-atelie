@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS sweet_tech_db;
-USE sweet_tech_db;
+CREATE DATABASE IF NOT EXISTS atelieBD;
+USE atelieBD;
 
 -- 1. Tabela de Categorias (Pastas/Álbuns)
 CREATE TABLE IF NOT EXISTS categorias (
