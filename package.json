@@ -16,3 +16,6 @@
   },
   "keywords": []
 }
+"scripts": {
+  "start": "node server.js"
+},
